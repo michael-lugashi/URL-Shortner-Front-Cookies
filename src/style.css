@@ -1,6 +1,70 @@
 body {
-    background-color: aqua;
+  background-color: aqua;
 }
 h1 {
-    color: orange
+  color: rgb(34, 141, 48);
+  text-align: center;
+  margin-top: 20px;
+}
+#table {
+  margin: auto;
+  width: 80vw !important;
+}
+
+.table .border1 {
+  border-top-left-radius: 20px;
+}
+
+.form-floating {
+  display: flex;
+  margin: auto;
+  max-width: 80vw;
+}
+.btn {
+  font-size: 20px;
+  border-radius: 0px 10px 10px 0px;
+
+  background-color: rgb(34, 141, 48);
+}
+.display {
+  margin: auto;
+  display: flex;
+  width: 80vw;
+}
+.shortendLabel {
+  display: flex;
+  background-color: rgb(34, 141, 48);
+  border-radius: 10px 0px 0px 10px;
+  color: white;
+  height: 60px;
+  font-size: 20px;
+  width: 160px;
+  align-items: center;
+  justify-content: center;
+}
+#shortendUrl {
+  background-color: white;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 0px 10px 10px 0px;
+  height: 60px;
+  padding-left: 10px;
+}
+#originalUrl {
+  border-radius: 10px 0px 0px 10px;
+}
+.tableHeading{
+    color: rgb(34, 141, 48);
+  text-align: center;
+  margin-bottom: 15px;
+}
+th {
+    text-align: center;
+}
+.lengthControl{
+    word-break: break-all;
+    max-width: 28vw;
+    min-width: 200px !important;
 }
