@@ -14,7 +14,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     static: path.resolve(__dirname, 'dist'),
-    port: 3000,
+    port: 8080,
     open: true,
     hot: true,
   },

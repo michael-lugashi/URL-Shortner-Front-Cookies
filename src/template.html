@@ -19,7 +19,7 @@
 
       <div class="form-floating mb-5">
         <input
-          id="originalUrl"
+          id="originalUrlInput"
           required
           type="url"
           class="form-control"
@@ -27,8 +27,8 @@
           aria-label="original URL"
           aria-describedby="button-addon2"
         />
-        <label for="originalUrl">Original URL</label>
-        <button class="btn btn-success" type="button" id="submit" value="submit">
+        <label for="originalUrlInput">Original URL</label>
+        <button class="btn btn-success" type="button" id="shorten" value="submit">
           Shorten
         </button>
       </div>
@@ -40,32 +40,14 @@
       <table class="table table-success table-striped" id="table">
         <thead>
           <tr>
-            <th scope="col" class="border1">#</th>
+            <th scope="col" class="borderCorner1">#</th>
             <th scope="col">Original URL</th>
             <th scope="col">Redirect Count</th>
             <th scope="col">Creation Date</th>
-            <th scope="col">Shortend URL</th>
+            <th scope="col" class="borderCorner2">Shortend URL</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td class=lengthControl>https://www.youtube.com/watch?v=1cjdlfB11Sshttps://en.wikipedia.org/wiki/Article_(grammar)#:~:text=commonly%20used%20to%20introduce%20a%20new%20discourse</td>
-            <td>0</td>
-            <td>November 4, 2021, 7:29 PM</td>
-            <td>http://localhost:3000/redirect/WNfBdWf2h</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+        <tbody id="displayUrlInfo">
         </tbody>
       </table>
     </main>

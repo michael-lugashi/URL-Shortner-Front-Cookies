@@ -11,10 +11,12 @@ h1 {
   width: 80vw !important;
 }
 
-.table .border1 {
+.table .borderCorner1 {
   border-top-left-radius: 20px;
 }
-
+.table .borderCorner2 {
+  border-top-right-radius: 20px;
+}
 .form-floating {
   display: flex;
   margin: auto;
@@ -52,19 +54,19 @@ h1 {
   height: 60px;
   padding-left: 10px;
 }
-#originalUrl {
+#originalUrlInput {
   border-radius: 10px 0px 0px 10px;
 }
-.tableHeading{
-    color: rgb(34, 141, 48);
+.tableHeading {
+  color: rgb(34, 141, 48);
   text-align: center;
   margin-bottom: 15px;
 }
 th {
-    text-align: center;
+  text-align: center;
 }
-.lengthControl{
-    word-break: break-all;
-    max-width: 28vw;
-    min-width: 200px !important;
+.lengthControl {
+  word-break: break-all;
+  max-width: 28vw;
+  min-width: 200px !important;
 }
