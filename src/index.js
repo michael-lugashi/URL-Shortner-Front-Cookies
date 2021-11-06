@@ -4,7 +4,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import {displayData} from './modules/displayData.js'
 
-const baseUrl = 'http://localhost:3000/';
+const baseUrl = 'https://url-shortner-04.herokuapp.com/';
 
 shorten.addEventListener('click', shorteningUrl);
 window.addEventListener('load', getTableData);
