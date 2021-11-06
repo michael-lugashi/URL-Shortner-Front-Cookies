@@ -1,6 +1,7 @@
 'use strict';
 import style from './style.css';
 const axios = require('axios');
+import swal from 'sweetalert';
 const baseUrl = 'http://localhost:3000/';
 
 shorten.addEventListener('click', shorteningUrl);
@@ -22,6 +23,10 @@ function shorteningUrl(event) {
       displayData(response.data);
       originalUrlInput.value = '';
       console.log(response.data);
+    })
+    .catch((err) => {
+      console.log(err.response);
+      swal(`Error: ${err.response.status}`, err.response.data, 'error')
     });
 }
 function displayData(data) {
