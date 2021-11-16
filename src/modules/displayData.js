@@ -16,7 +16,7 @@ export function displayData(data) {
     tableRow.append(createOriginalUrlTableElement(data[urlInfo]));
     tableRow.append(createTableElement(data[urlInfo].redirectCount));
     tableRow.append(createTableElement(data[urlInfo].creationDate));
-    tableRow.append(createShortUrlTableElement(data[urlInfo].shortUrl));
+    tableRow.append(createShortUrlTableElement(data[urlInfo].shortUrlId));
     displayUrlInfo.append(tableRow);
   }
 }

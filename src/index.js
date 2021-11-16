@@ -1,10 +1,10 @@
 'use strict';
-import style from './style.css';
+import './style.css';
 import axios from 'axios';
 import swal from 'sweetalert';
 import {displayData} from './modules/displayData.js'
 
-const baseUrl = 'https://url-shortner-04.herokuapp.com/';
+export const baseUrl = 'http://localhost:3000/';
 
 shorten.addEventListener('click', shorteningUrl);
 window.addEventListener('load', getTableData);
@@ -20,7 +20,7 @@ function getTableData() {
 function shorteningUrl(event) {
   axios
     .post(`${baseUrl}shorten`, {
-      longURL: originalUrlInput.value,
+      originalUrl: originalUrlInput.value,
     })
     .then((response) => {
       displayData(response.data);

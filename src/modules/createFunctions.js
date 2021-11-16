@@ -1,5 +1,6 @@
 'use strict';
 
+const shortUrlBase = 'http://localhost:3000/redirect/'
 export function createTableRowHeader(rowNum) {
   const rowHeader = document.createElement('th');
   rowHeader.textContent = rowNum;
@@ -9,7 +10,7 @@ export function createTableRowHeader(rowNum) {
 // here If I check if the url is is the one the user just entered to so I can readily show him
 export function createOriginalUrlTableElement(urlInfo) {
   if (urlInfo.originalUrl === originalUrlInput.value) {
-    displayShortUrl(urlInfo.shortUrl);
+    displayShortUrl(urlInfo.shortUrlId);
   }
   const _originalUrl = document.createElement('td');
   _originalUrl.textContent = urlInfo.originalUrl;
@@ -23,15 +24,15 @@ export function createTableElement(text) {
   return tableElement;
 }
 
-export function createShortUrlTableElement(shortUrl) {
+export function createShortUrlTableElement(shortUrlId) {
   const tableElement = document.createElement('td');
-  tableElement.append(createLink(shortUrl));
+  tableElement.append(createLink(shortUrlBase + shortUrlId));
   return tableElement;
 }
 
-function displayShortUrl(shortUrl) {
+function displayShortUrl(shortUrlId) {
   shortendUrl.textContent = '';
-  shortendUrl.append(createLink(shortUrl));
+  shortendUrl.append(createLink(shortUrlBase + shortUrlId));
 }
 function createLink(shortUrl) {
   const link = document.createElement('a');
