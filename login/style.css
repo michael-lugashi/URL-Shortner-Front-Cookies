@@ -1,0 +1,27 @@
+body {
+ background-color: aqua;
+}
+.title {
+ color: rgb(34, 141, 48);
+ text-align: center;
+ margin-top: 20px;
+ margin-bottom: 40px;
+ font-size: 4vw;
+}
+.firstInput {
+ border-radius: 10px;
+}
+.secondInput {
+ border-radius: 10px 0px 0px 10px;
+}
+
+.form-floating {
+ display: flex;
+ margin: auto;
+ max-width: 80vw;
+}
+.btn {
+ font-size: 20px;
+ border-radius: 0px 10px 10px 0px;
+ background-color: rgb(34, 141, 48);
+}

@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development', //development
   entry: {
     main: path.resolve(__dirname, 'src/index.js'),
+    login: path.resolve(__dirname, 'login/index.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -13,7 +14,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, 'dist/login.html'),
     port: 8080,
     open: true,
     hot: true,
@@ -29,8 +30,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'URL Shortner',
-      filename: 'index.html',
+      filename: 'home.html',
       template: path.resolve(__dirname, 'src/template.html'),
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'URL Shortner Login',
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'login/template.html'),
+      chunks: ['login']
     }),
   ],
 };
